@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>B9A3 Hockey</title>
+
     <!-- tailwind and daisyui CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -16,11 +17,15 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'hockey-btn-bg': '#FF4240',
                     }
                 }
             }
         }
     </script>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/1a9967d43b.js" crossorigin="anonymous"></script>
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,8 +41,78 @@
 </head>
 
 <body class="font-manrope">
-    <header>
+    <header class="container mx-auto">
+        <!-- navigation bar start -->
+        <div class="navbar lg:mt-14">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52">
+                        <li><a class="text-hockey-btn-bg font-bold">Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
+                </div>
+                <a class="text-3xl font-extrabold">Hockey<span class="text-hockey-btn-bg">’</span>s</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-base">
+                    <li><a class="text-hockey-btn-bg font-bold">Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Pages</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <i class="fa-solid fa-magnifying-glass hidden lg:block text-[#424247]"></i>
+                <a class="btn bg-hockey-btn-bg text-white hover:bg-hockey-btn-bg lg:ml-5">Get Ticket</a>
+            </div>
+        </div>
+        <!-- navigation bar end -->
 
+        <!-- slider start -->
+        <div class="relative lg:mx-0 mx-5 lg:mt-12 mt-6">
+            <div class="carousel w-full rounded-[16px]">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="Images/1.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="Images/trophy.jpg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- banner badge -->
+
+            <div class="lg:w-[566px] bg-[#131318] rounded-xl p-4 lg:p-8 absolute lg:right-8 lg:bottom-8">
+                <h2 class="text-[18px] lg:text-2xl font-extrabold text-white">Meet all the heroes from the field</h2>
+                <p class="text-base font-medium lg:mt-4 text-[#FFFFFF99]">Dit amet consectetur. Condimentum dignissim
+                    adipiscing aliquam
+                    turpis
+                    placerat dolor. Purus urna
+                    in
+                    sit
+                    nullam proin.</p>
+            </div>
+        </div>
+
+        <!-- slider end -->
     </header>
     <main>
 
